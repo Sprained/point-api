@@ -7,6 +7,7 @@ import { MailService } from '../mail/mail.service'
 import { CreateCompanyDto } from './companies.dto'
 import { User } from '../users/users.interface'
 import { Company } from './companies.interface'
+import { UserRole } from 'src/enums/user'
 import Erros from 'src/enums/errors'
 
 @Injectable()
@@ -27,7 +28,8 @@ export class CompaniesService {
     user = new this.user({
       email: createCompanyDto.email,
       password: createCompanyDto.password,
-      confirmationToken: uuid4()
+      confirmationToken: uuid4(),
+      role: UserRole.COMPANY
     })
 
     await user.save()
