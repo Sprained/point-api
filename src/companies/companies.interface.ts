@@ -6,4 +6,5 @@ export class Company extends Document {
   cnpj: string
   phone: string
   user: string
+  role: string
 }

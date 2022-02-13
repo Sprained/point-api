@@ -6,6 +6,7 @@ import { CompaniesModule } from './companies/companies.module'
 import { UsersModule } from './users/users.module'
 import { MailModule } from './mail/mail.module'
 import { ConfigModule } from '@nestjs/config'
+import { AuthModule } from './auth/auth.module'
 
 @Module({
   imports: [
@@ -19,7 +20,8 @@ import { ConfigModule } from '@nestjs/config'
     }),
     UsersModule,
     CompaniesModule,
-    MailModule
+    MailModule,
+    AuthModule
   ],
   controllers: [],
   providers: [],
