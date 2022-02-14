@@ -3,6 +3,7 @@ import { BullModule } from '@nestjs/bull'
 import { Module } from '@nestjs/common'
 
 import { CompaniesModule } from './companies/companies.module'
+import { EmployeesModule } from './employees/employees.module'
 import { UsersModule } from './users/users.module'
 import { MailModule } from './mail/mail.module'
 import { ConfigModule } from '@nestjs/config'
@@ -21,7 +22,8 @@ import { AuthModule } from './auth/auth.module'
     UsersModule,
     CompaniesModule,
     MailModule,
-    AuthModule
+    AuthModule,
+    EmployeesModule
   ],
   controllers: [],
   providers: [],

@@ -18,6 +18,7 @@ import { MailModule } from '../mail/mail.module'
     UsersModule
   ],
   providers: [CompaniesService],
-  controllers: [CompaniesController]
+  controllers: [CompaniesController],
+  exports: [CompaniesService]
 })
 export class CompaniesModule {}

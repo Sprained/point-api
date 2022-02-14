@@ -8,4 +8,5 @@ export class User extends Document {
   confirmationToken: string
   confirmationMail: boolean
   recoverToken: string
+  role: string
 }

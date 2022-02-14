@@ -7,7 +7,8 @@ export const UserSchema = new mongoose.Schema({
   status: { type: Boolean, default: true },
   confirmationToken: { type: String, maxlength: 36 },
   confirmationMail: { type: Boolean, default: false },
-  recoverToken: { type: String, maxlength: 36 }
+  recoverToken: { type: String, maxlength: 36 },
+  role: String
 }, {
   timestamps: true,
   collection: 'users'

@@ -45,4 +45,10 @@ export class CompaniesService {
     if (process.env.NODE_ENV != 'test')
       await this.mailService.emailConfirmation(user.email, user.confirmationToken)
   }
+
+  async getCompanyByUserId(userId: string): Promise<Company> {
+    return await this.company.findOne({
+      user: userId
+    })
+  }
 }
