@@ -59,4 +59,10 @@ export class EmployeesService {
     user.status = false
     await user.save()
   }
+
+  async getEmployeeByUserId(userId: string) {
+    return await this.employee.findOne({
+      user: userId
+    })
+  }
 }
